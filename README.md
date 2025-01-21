@@ -8,8 +8,6 @@ The ZIMpackage allows the use of the classification models obtained in the resea
 
 These models allow the automatic classification of leaf-patch-clamp-pressure probes output variable (Pp) daily curves into three leaf water status: state 1 (low stress), state 2 (moderate stress) and state 3 (highly stressed) which was described by previous literature.
 
-The model rf2 is supposed to be used together with the model rf1, focusing on the daily curves classified as state 2.
-
 The package contains a function called "getpoints" which allow the pre-processing of the 5-minutes Pp data and extracts eight variables used as input into the random forest models.
 
 The functions and the models present in this package were developed with the use of 5-minutes interval between measurements. However, it will probably work within a range of 1 to 10 minutes between measurements.
@@ -28,6 +26,8 @@ The function ZIM_status() requires the user to chose between the three models pr
   - model "rf1": random forest model trained regarding the visual identification of curves from states 1, 2 and 3;
   - model "rf2": random forest model trained regarding the identification of state 2 curves, which are usually misclassified even visually. This model was obtained with the use of stem water potential threshold values as described in the scientific paper mentioned above.
   - model "rf_pot": random forest model trained regardless of the visual identification, but with the target result obtained by threshold values of stem water potential (SWP): state 1 - SWP > -1.2 MPa; state 2 - SWP from -1.2 until -1.7 MPa; state 3 - SWP < -1.7 MPa.
+
+The model rf2 is supposed to be used together with the model rf1, focusing on the daily curves classified as state 2.
 
 ## Installation
 
