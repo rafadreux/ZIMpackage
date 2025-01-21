@@ -1,0 +1,13 @@
+Package: ZIMpackage
+Title: Classification of LPCP Probes Daily Curves for Olives
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Rafael", family = "Dreux Miranda Fernandes", email = "rafadreux@gmail.com", 
+           role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5260-7582"))
+Description: This package allows the use of the classification models obtained in the research paper (Fernandes et al., 2017) published in Computers and Electronics in Agriculture (https://doi.org/10.1016/j.compag.2017.09.005). These models allow the authomatic classification of leaf-patch-clamp-pressure probes output variable (Pp) daily curves into states 1 (low stress), 2 (moderate stress) and 3 (highly stressed) which was described by previous literature.
+Depends: randomForest
+Import: randomForest
+License: LGPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
