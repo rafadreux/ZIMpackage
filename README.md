@@ -33,6 +33,8 @@ The function `ZIM_status()` requires the user to chose between the three models 
 
 The model **rf2** is supposed to be used together with the model **rf1**, focusing on the daily curves classified as _state 2_.
 
+The package include two data frames as examples (`example1` and `example2`) of daily curves of the Pp variable measured in olive trees.
+
 ## Installation
 
 You can install the development version of ZIMpackage like so:
