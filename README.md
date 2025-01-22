@@ -27,7 +27,7 @@ The function `ZIM_status()` requires the user to chose between the three models 
   - model **"rf2"**: random forest model trained regarding the identification of _state 2_ curves, which are usually misclassified even visually. This model was obtained with the use of stem water potential threshold values as described in the scientific paper mentioned above.
   - model **"rf_pot"***: random forest model trained regardless of the visual identification, but with the target result obtained by threshold values of stem water potential (<ins>SWP</ins>): _state 1_ - <ins>SWP</ins> > -1.2 MPa; _state 2_ - <ins>SWP</ins> from -1.2 until -1.7 MPa; _state 3_ - <ins>SWP</ins> < -1.7 MPa.
 
-The model **rf2** is supposed to be used together with the model **rf1**, focusing on the daily curves classified as **state 2**.
+The model **rf2** is supposed to be used together with the model **rf1**, focusing on the daily curves classified as _state 2_.
 
 ## Installation
 
