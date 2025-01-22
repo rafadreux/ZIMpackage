@@ -2,8 +2,8 @@
 # ZIMpackage
 
 <!-- badges: start -->
-https://img.shields.io/badge/license-LGPLv3-green
-https://img.shields.io/badge/R%3E%3D-4.4.0-blue
+![License Badge](https://img.shields.io/badge/license-LGPLv3-green)
+![R version](https://img.shields.io/badge/R%3E%3D-4.4.0-blue)
 <!-- badges: end -->
 
 The ZIMpackage allows the use of the classification models obtained in the research paper (Fernandes et al., 2017) published in Computers and Electronics in Agriculture (https://doi.org/10.1016/j.compag.2017.09.005). 
