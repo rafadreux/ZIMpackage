@@ -47,7 +47,7 @@ This is a basic example which shows you how to use the functions:
 
 ``` r
 library(ZIMpackage)
-my_points <- getpoints(x) # being x the values of Pp (output variable from the LPCP probes)
+my_points <- get_points(example1) # being example1 a dataframe (within the package data) with values of Pp (output variable from the LPCP probes)
 
 #the recommended use is to prepare the data into two collumns, one with the date (or DOY) and one with the Pp values (raw).
 #this way, you can use functions such as aggregate or tapply to get the variables for many days.
