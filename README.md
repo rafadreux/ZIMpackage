@@ -5,6 +5,8 @@
 ![License Badge](https://img.shields.io/badge/license-LGPLv3-green)
 ![R version](https://img.shields.io/badge/R%3E%3D-4.4.0-blue)
 
+![R logo](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
+
 [![Citation Badge](https://api.juleskreuer.eu/citation-badge.php?doi=10.1016/j.compag.2017.09.005)](https://juleskreuer.eu//projects/citation-badge)
 <!-- badges: end -->
 
@@ -51,11 +53,15 @@ This is a basic example which shows you how to use the functions:
 library(ZIMpackage)
 my_points <- get_points(example1) # being example1 a dataframe (within the package data) with values of Pp (output variable from the LPCP probes)
 
-#the recommended use is to prepare the data into two collumns, one with the date (or DOY) and one with the Pp values (raw).
-#this way, you can use functions such as aggregate or tapply to get the variables for many days.
-
 pred <- ZIM_status(model = "rf1", new_data = my_points)
 
-# similarly, the function ZIM_status can also be applied to many days, by using functions such as tapply and aggregate.
+#the recommended use is to prepare the data into two collumns, one with the date (or DOY) and one with the Pp values (raw).
+#this way, you can use functions such as tapply to get the variables for many days, such as:
+
+my_points1 <- data.frame(Date = unique(example3$Date), aggregate(example3$Pp, list(example3$Date), FUN = get_points)$x)
+
+# similarly, the function ZIM_status can also be applied to many days, by using functions such as tapply, such as:
+
+pred1 <- tapply(my_points1[,2:9], my_points1$Date, FUN = ZIM_status, model="rf_pot")
 ```
 

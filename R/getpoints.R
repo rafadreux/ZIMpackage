@@ -60,23 +60,23 @@ get_points <- function(Pp_ZIM){
       a14 <- a8[2]
     }
     if(a8[2]==a8[3]){
-      return(data.frame(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
+      return(c(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
                max2 = a12, pmax2 = a14, rat2 = a13))
     } else {
-      return(data.frame(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
+      return(c(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
                max2 = a9, pmax2 = a14, rat2 = a12))
     }
   } else if (length(a8)==2){
     a9 <- a2[sum(a4[1:which(a4==a8[2])-1])+1]
     a12 <- a8[2]
     a14 <- x2[a9+a8[2]]/x2[a9]
-    return(data.frame(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
+    return(c(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
              max2 = a9, pmax2 = a12, rat2 = a14))
   } else {
     a9 <- NA
     a12 <- NA
     a14 <- NA
-    return(data.frame(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
+    return(c(slope_1 = x9, slope_2 = x6, max1 = b1, pmax1 = a5, rat1 = a7,
              max2 = a9, pmax2 = a12, rat2 = a14))
   }
 }

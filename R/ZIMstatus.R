@@ -5,7 +5,7 @@
 #' @return Tree water status (1, 2 or 3).
 #' @import randomForest
 #' @export
-ZIM_status <- function(model, new_data) {
+ZIM_status <- function(model = "rf1", new_data) {
   if (model == "rf1") {
     load("data/rf_inf2.RData")
     if (!all(names(new_data) %in% names(rf_inf2$forest$xlevels))) {
